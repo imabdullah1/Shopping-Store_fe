@@ -1,0 +1,143 @@
+.wrapper,
+.mobile-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  @media (min-width: 760px) {
+    padding: 10px 30px;
+  }
+}
+.mobile-wrapper {
+  top: 80px;
+  display: flex;
+  @media (min-width: 760px) {
+    display: none;
+  }
+}
+.brand-group {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 760px) {
+    gap: 20px;
+  }
+}
+.menu {
+  width: 20px;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 10px;
+  @media (min-width: 760px) {
+    margin-right: 20px;
+  }
+}
+.logo {
+  width: 42px;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.brand-name {
+  text-wrap: nowrap;
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 30px 0px;
+}
+.user-group {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 10px;
+  gap: 20px;
+  @media (min-width: 760px) {
+    gap: 30px;
+    padding-right: 20px;
+  }
+}
+.user-icon,
+.cart-icon {
+  width: 24px;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+.cart-count {
+  background-color: var(--accent-color);
+  font-size: 0.9em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4px;
+  right: -8px;
+}
+.cart-total {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: -12px;
+  left: 0px;
+}
+.search-group {
+  height: 100%;
+  display: none;
+  align-items: center;
+  @media (min-width: 760px) {
+    display: flex;
+    margin-left: -40px;
+  }
+}
+.search-input {
+  width: 100%;
+  height: var(--search-input-height);
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  padding-left: 30px;
+  padding-right: 60px;
+  @media (min-width: 760px) {
+    width: 600px;
+  }
+}
+.search-icon-wrapper {
+  background-color: var(--accent-color);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: var(--search-input-height);
+  width: calc(var(--search-input-height) + 10px);
+  margin-left: calc(-1 * var(--search-input-height) + 10px);
+}
+.search-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 11px;
+  cursor: pointer;
+}
+.mobile {
+  display: flex;
+  width: 100%;
+  padding-top: 2px;
+  @media (min-width: 760px) {
+    display: none;
+  }
+}

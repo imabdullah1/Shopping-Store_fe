@@ -1,0 +1,7 @@
+.main {
+  height: 100%;
+  padding: 160px 0;
+  @media (min-width: 760px) {
+    padding: 80px 0px;
+  }
+}

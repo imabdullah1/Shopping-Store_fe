@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0px;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px auto 60px;
+  cursor: default;
+  gap: 14px;
+}
+.image {
+  width: 100px;
+  height: 100%;
+  object-fit: contain;
+}
+.name {
+  line-height: 1.6em;
+  @media (min-width: 760px) {
+    padding-right: 80px;
+  }
+}
+.detail {
+  opacity: 0.8;
+  font-size: 0.8em;
+  padding-top: 10px;
+  line-height: 1.6em;
+  display: none;
+  @media (min-width: 760px) {
+    display: block;
+  }
+}
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  padding-top: 20px;
+  @media (min-width: 760px) {
+    padding-top: 0px;
+  }
+}
+.remove {
+  text-decoration: underline;
+  transform: scale(0.9);
+  font-weight: 300;
+  cursor: pointer;
+}

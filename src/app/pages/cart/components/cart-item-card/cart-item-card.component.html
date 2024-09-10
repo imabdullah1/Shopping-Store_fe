@@ -1,0 +1,25 @@
+@if (item) {
+<div class="wrapper">
+  <div class="item">
+    <img [src]="item.imageUrl" [alt]="item.name" class="image" />
+    <div class="name">
+      {{ item.name }}
+      <div class="detail">
+        Free 90-day returns<br />
+        Gift Eligible<br />
+      </div>
+    </div>
+    <div class="price">
+      <strong>${{ item.price }}</strong>
+    </div>
+  </div>
+  <section class="controls">
+    <span class="remove" (click)="onRemoveItem()">Remove</span>
+    <app-quantity-stepper
+      [quantity]="item.quantity"
+      (quantityChange)="onQuantityChange($event)"
+    >
+    </app-quantity-stepper>
+  </section>
+</div>
+}

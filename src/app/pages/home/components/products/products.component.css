@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  display: grid;
+  max-height: fit-content;
+  grid-template-columns: auto;
+  row-gap: 70px;
+  @media (min-width: 760px) {
+    grid-template-columns: repeat(6, auto);
+    row-gap: 10px;
+  }
+}
+
+app-product-card {
+  margin: auto;
+}

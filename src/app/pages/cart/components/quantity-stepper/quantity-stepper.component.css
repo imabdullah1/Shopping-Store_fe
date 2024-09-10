@@ -1,0 +1,26 @@
+.wrapper {
+  width: 140px;
+  height: 34px;
+  display: grid;
+  grid-template-columns: 25px 70px 25px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 30px;
+  place-content: center center;
+  place-items: center center;
+  padding: 0px 40px;
+  user-select: none;
+}
+.button {
+  width: 25px;
+  font-weight: 200;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.button:hover {
+  color: #ffffff;
+  background-color: gray;
+  border-radius: 50%;
+}

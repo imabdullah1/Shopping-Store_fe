@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--footer-color);
+  color: var(--text-color);
+  padding: 50px 10px;
+  gap: 20px;
+  font-size: 0.9em;
+  cursor: default;
+}
+
+.copyright {
+  background-color: var(--main-color);
+}

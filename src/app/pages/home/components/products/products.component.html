@@ -1,0 +1,10 @@
+<div class="wrapper">
+  @for (product of products; track product.id) {
+  <h3>
+    <app-product-card
+      [product]="product"
+      (add)="onAdd(product)"
+    ></app-product-card>
+  </h3>
+  }
+</div>

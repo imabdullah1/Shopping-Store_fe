@@ -1,0 +1,55 @@
+<div class="wrapper">
+  <header class="header">
+    <strong>Cart </strong>({{
+      count() === 1 ? count() + " item" : count() + " items"
+    }})
+  </header>
+  @if (count()) {
+  <main class="main">
+    <div class="items shadow">
+      <div class="title">
+        <strong>{{
+          count() === 1 ? count() + " item" : count() + " items"
+        }}</strong>
+      </div>
+      <div class="arrival">
+        <strong>Arrives by Wed, Jan 24</strong>
+      </div>
+      <div class="content">
+        @for (item of items(); track item.id) {
+        <app-cart-item-card
+          [item]="item"
+          (itemQuantityUpdate)="onItemQuantityUpdate($event, item.id)"
+          (removeItem)="onRemoveItem(item.id)"
+        ></app-cart-item-card>
+        }
+      </div>
+    </div>
+    <aside class="total shadow">
+      <button class="checkout" (click)="onCheckout()">
+        <strong>Continue to Checkout</strong>
+      </button>
+      <div class="subtotal value-pair">
+        <div>
+          <strong>Subtotal</strong>({{
+            count() === 1 ? count() + " item" : count() + " items"
+          }})
+        </div>
+        <div>${{ total() }}</div>
+      </div>
+      <div class="taxes value-pair">
+        <div><strong>Taxes</strong></div>
+        <div>Calculated at checkout</div>
+      </div>
+      <div class="estimated-total value-pair">
+        <div><strong>Estimated Total</strong></div>
+        <div class="estimated-total-value">
+          <strong>${{ total() }}</strong>
+        </div>
+      </div>
+    </aside>
+  </main>
+  } @else {
+  <div class="cart-empty">Cart is Empty!</div>
+  }
+</div>
